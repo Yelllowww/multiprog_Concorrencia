@@ -28,8 +28,8 @@ def soma2(valor):
         
         
 if __name__ == "__main__":
-    t1 = threading.Thread(target=soma1(10))
-    t2 = threading.Thread(target=soma2(10))
+    t1 = threading.Thread(target=soma1, args=(10,))
+    t2 = threading.Thread(target=soma2, args=(10,))
     t1.start()
     t2.start()
     t1.join()
